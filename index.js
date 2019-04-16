@@ -19,6 +19,7 @@ function inputDigit(digit) {
 }
 
 function inputDecimal(dot) {
+  if (calculator.waitingForSecondOperand === true) return;
   if (!calculator.displayValue.includes(dot)) {
     calculator.displayValue += dot;
   }
@@ -28,9 +29,16 @@ function handleOperator(nextOperator) {
   const { firstOperand, displayValue, operator } = calculator;
   const inputValue = parseFloat(displayValue);
 
+  if (operator && calculator.waitingForSecondOperand) {
+    calculator.operator = nextOperator;
+    console.log(calculator);
+    return;
+  }
+
   if (firstOperand == null) {
     calculator.firstOperand = inputValue;
   } else if (operator) {
+    const currentValue = firstOperand || 0;
     const result = performCalculation[operator](firstOperand, inputValue);
 
     calculator.displayValue = String(result);
@@ -52,6 +60,14 @@ const performCalculation = {
   "-": (firstOperand, secondOperand) => firstOperand - secondOperand,
 
   "=": (firstOperand, secondOperand) => secondOperand
+};
+
+resetCalculator = () => {
+  calculator.displayValue = "0";
+  calculator.firstOperand = null;
+  calculator.waitingForSecondOperand = false;
+  calculator.operator = null;
+  console.log(calculator);
 };
 
 updateDisplay = () => {
@@ -80,8 +96,9 @@ keys.addEventListener("click", event => {
     return;
   }
 
-  if (target.classList.contains("all-clear")) {
-    console.log("clear", target.value);
+  if (target.classList.contains("allclear")) {
+    resetCalculator();
+    updateDisplay();
     return;
   }
 
