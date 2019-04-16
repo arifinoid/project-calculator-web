@@ -9,107 +9,115 @@
     <link rel="stylesheet" href="/index.css" />
   </head>
   <div class="container">
-    <div class="col-sm-4 offset-sm-4 result">
-      <input type="text" class="monitor" value="" disabled />
-    </div>
-    <div class="calculatorbutton">
-      <div class="row">
-        <div class="col-md-4 offset-sm-4">
-          <button
-            type="button"
-            class="btn btn-outline-primary operator"
-            value="+"
-          >
-            +
-          </button>
-          <button
-            type="button"
-            class="btn btn-outline-primary operator"
-            value="-"
-          >
-            -
-          </button>
-          <button
-            type="button"
-            class="btn btn-outline-primary operator"
-            value="*"
-          >
-            x
-          </button>
-          <button
-            type="button"
-            class="btn btn-outline-primary operator"
-            value="/"
-          >
-            ÷
-          </button>
+    <section class="main">
+      <h5>Minimalist Calculator</h5>
+      <div class="col-sm  result">
+        <input type="text" class="monitor" value="" disabled />
+      </div>
+      <div class="calculatorbutton">
+        <div class="row justify-content-center">
+          <div class="col-sm">
+            <button
+              type="button"
+              class="btn btn-outline-primary operator"
+              value="+"
+            >
+              +
+            </button>
+            <button
+              type="button"
+              class="btn btn-outline-primary operator"
+              value="-"
+            >
+              -
+            </button>
+            <button
+              type="button"
+              class="btn btn-outline-primary operator"
+              value="*"
+            >
+              x
+            </button>
+            <button
+              type="button"
+              class="btn btn-outline-primary operator"
+              value="/"
+            >
+              ÷
+            </button>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-sm">
+            <button type="button" class="btn btn-outline-dark" value="7">
+              7
+            </button>
+            <button type="button" class="btn btn-outline-dark" value="8">
+              8
+            </button>
+            <button type="button" class="btn btn-outline-dark" value="9">
+              9
+            </button>
+            <button
+              type="button"
+              class="btn btn-outline-success operator"
+              value="="
+            >
+              =
+            </button>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-sm ">
+            <button type="button" class="btn btn-outline-dark" value="4">
+              4
+            </button>
+            <button type="button" class="btn btn-outline-dark" value="5">
+              5
+            </button>
+            <button type="button" class="btn btn-outline-dark" value="6">
+              6
+            </button>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-sm ">
+            <button type="button" class="btn btn-outline-dark" value="1">
+              1
+            </button>
+            <button type="button" class="btn btn-outline-dark" value="2">
+              2
+            </button>
+            <button type="button" class="btn btn-outline-dark" value="3">
+              3
+            </button>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-sm ">
+            <button type="button" class="btn btn-outline-dark" value="0">
+              0
+            </button>
+            <button
+              type="button"
+              class="btn btn-outline-dark decimal"
+              value="."
+            >
+              .
+            </button>
+            <button
+              type="button"
+              class="btn btn-outline-danger allclear"
+              value="allclear"
+            >
+              AC
+            </button>
+          </div>
         </div>
       </div>
-      <div class="row">
-        <div class="col-md-4 offset-sm-4">
-          <button type="button" class="btn btn-outline-dark" value="7">
-            7
-          </button>
-          <button type="button" class="btn btn-outline-dark" value="8">
-            8
-          </button>
-          <button type="button" class="btn btn-outline-dark" value="9">
-            9
-          </button>
-          <button
-            type="button"
-            class="btn btn-outline-success operator"
-            value="="
-          >
-            =
-          </button>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-4 offset-sm-4">
-          <button type="button" class="btn btn-outline-dark" value="4">
-            4
-          </button>
-          <button type="button" class="btn btn-outline-dark" value="5">
-            5
-          </button>
-          <button type="button" class="btn btn-outline-dark" value="6">
-            6
-          </button>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-4 offset-sm-4">
-          <button type="button" class="btn btn-outline-dark" value="1">
-            1
-          </button>
-          <button type="button" class="btn btn-outline-dark" value="2">
-            2
-          </button>
-          <button type="button" class="btn btn-outline-dark" value="3">
-            3
-          </button>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-4 offset-sm-4">
-          <button type="button" class="btn btn-outline-dark" value="0">
-            0
-          </button>
-          <button type="button" class="btn btn-outline-dark decimal" value=".">
-            .
-          </button>
-          <button
-            type="button"
-            class="btn btn-outline-danger allclear"
-            value="allclear"
-          >
-            AC
-          </button>
-        </div>
-      </div>
-    </div>
+    </section>
   </div>
+
   <body>
     <script src="/index.js"></script>
   </body>
