@@ -11,12 +11,25 @@
   padding: 20px;
   border-radius: 10px;
   z-index: 1;
+  border: 1px solid salmon;
+}
+
+.result {
+  border: 1px solid rgb(162, 0, 255);
+  border-radius: 10px;
+  margin: 10px auto;
+  font-size: 30px;
+  width: 230px;
 }
 
 .btn {
   width: 50px;
   margin-right: 5px;
   margin-bottom: 10px;
+}
+
+button.btn.btn-outline-success.operator {
+  width: 230px;
 }
 
 input {
@@ -27,6 +40,7 @@ input {
 
 h5 {
   font-family: "Fira Mono", monospace;
+  font-size: 18.5px;
 }
 /* -------------------------------------------- */
 .ball {
